@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dragon Ball Z</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: black;
+      }
+      #game-container {
+        position: relative;
+        width: 90vw;
+        height: 90vh;
+        border: 2px solid white;
+        background: linear-gradient(to bottom, #a5d1ff, #0066ff);
+        overflow: hidden;
+        margin-top: 60px;
+        margin-left: 70px;
+        z-index: 2;
+      }
+      #life-bar {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 200px;
+        height: 20px;
+        background-color: yellow;
+      }
+      #friza-life-bar {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 200px;
+        height: 20px;
+        background-color: pink;
+      }
+      .logo {
+        position: absolute;
+        top: -2%;
+        left: 42%;
+      }
+      .goku {
+        position: absolute;
+      }
+      .kameha {
+        position: absolute;
+        display: none;
+      }
+      .kiBlast {
+        position: absolute;
+        display: none;
+      }
+      .friza {
+        position: absolute;
+        right: 0;
+      }
+
+
+      #result-popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+      }
+      
+      .popup-content {
+        background-color: rgb(255, 126, 75);
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        border-color: white;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      }
+      
+      #result-popup.hidden {
+        display: none;
+      }
+      
+      #result-popup p {
+        font-size: 34px;
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        margin-bottom: 15px;
+      }
+      .resetBtn{
+        border: none;
+        border-radius: 10px;
+        background-color: yellow;
+        color: rgb(0, 0, 0);
+        font-size: x-large;
+        padding: 10px 48px;
+      }
+      .resetBtn:hover{
+        scale: 1.1;
+      }
+
+      .cloud1{
+        position: absolute;
+        z-index: 2;
+        left: 133px;
+        top:10px
+      }
+      .cloud2{
+        position: absolute;
+        z-index: 2;
+        left: 800px;
+        top:30px
+      }
+     
+
+      
+      </style>
+  </head>
+  <body>
+    <!-- <audio id="bgAudio" src="assets\Ultra Instinct Theme.mp3" autoplay loop preload="auto"></audio> -->
+
+    <div id="life-bar"></div>
+    <div id="friza-life-bar"></div>
+    <img height="80px" src="assets\Dball-Bg.png" class="logo" />
+
+    <div id="game-container">
+      <img height="80px" class="cloud1" src="assets\clouds.png">  
+      <img height="100px" class="cloud2" src="assets\clouds.png">  
+      <img src="assets\kid-goku-ezgif.com-rotate.gif" class="goku" />
+      <img src="assets\kame_head_yellow (1).png" class="kameha" />
+      <img src="assets\kame_tail_pink (1).png" class="kiBlast" />
+      <img height="100px" src="assets\freezer.png" class="friza" />
+    </div>
+
+    <div id="result-popup" class="hidden">
+      <div class="popup-content">
+        <p id="result-message"></p>
+        <button class="resetBtn" onclick="resetGame()">Play Again</button>
+      </div>
+
+    <script src="script.js">
+    </script>
+  </body>
+</html>

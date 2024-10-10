@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Ball Z</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+        .bg{
+            height: 100vh;
+            width: 100vw;
+            display: grid;
+            grid-template-columns: 25% 50% 25%;
+            grid-template-rows: 33% 34% 33%;
+            grid-template-areas:
+            "gokuposter dragonBallPoster frizaposter"
+            "gokuposter openingVedio frizaposter"
+            "gokuposter start frizaposter";
+            justify-items: center;
+            align-items: center;
+            background: linear-gradient(90deg, #fdec01 50%, #c401ff 50%);
+
+        }
+        
+        .gokuPoster{
+            grid-area: gokuposter;
+        }
+        .dragonBallPoster{
+            grid-area: dragonBallPoster;
+        }
+        .openingVedio{
+            grid-area: openingVedio;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .start{
+            grid-area: start;
+            border-radius: 100px;
+            
+        
+        }
+        .start img{
+            height: 150px;
+            border-radius: 100px;
+
+        }
+
+        .start:hover {
+            box-shadow: 0 8px 20px black;
+            transform: scale(1.05);
+        }
+
+            
+        .frizaposter{
+            grid-area: frizaposter;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <video class="openingVedio" height="250px" controls autoplay loop>
+            <source src="assets\Dragon Ball Z Kai Opening.mp4" type="video/mp4">
+        </video>
+        <img class="gokuPoster" height="700px" src="assets\gokuPoster.png">
+        <img class="dragonBallPoster" height="200px" src="assets\Dball-Bg.png">
+        <button class="start"><img src="assets\ball.png" alt=""></button>
+        <img class="frizaposter" height="650px" src="assets\frizaposter.jpeg">
+    </div>
+
+    <script>
+        let bg = document.querySelector('.bg');
+        let start = document.querySelector('.start');
+        start.addEventListener('mouseover',()=>{
+            bg.style.background = "linear-gradient(90deg, #fdec01, #c401ff)";
+        })
+        start.addEventListener('mouseout',()=>{
+            bg.style.background = "linear-gradient(90deg, #fdec01 50%, #c401ff 50%)";
+        })
+        start.addEventListener('click',()=>{
+            window.location.href = 'index2.html'; 
+        })
+
+        
+
+    </script>
+
+</body>
+</html>
