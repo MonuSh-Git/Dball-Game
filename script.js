@@ -97,7 +97,7 @@ function startFrizaMovement() {
   setInterval(() => {
     frizaY = Math.random() * (gameContainer.offsetHeight - 100);
     friza.style.top = frizaY + "px";
-  }, 2000);
+  }, 1000);
 }
 
 startFrizaMovement();
@@ -136,7 +136,7 @@ function resetGame() {
   randomKiBlastAttack();
 }
 
-let kiBlastSpeed = 5;
+let kiBlastSpeed = 10;
 let kiBlastReleased = false;
 
 function releaseKiBlast() {
